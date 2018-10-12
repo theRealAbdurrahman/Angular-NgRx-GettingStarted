@@ -17,13 +17,24 @@ import { PageNotFoundComponent } from './home/page-not-found.component';
 /* Feature Modules */
 import { UserModule } from './user/user.module';
 
+/* ngrx store*/
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
+
 @NgModule({
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(ProductData),
     UserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      name: 'APM DEMO',
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production // Restrict extension to log-only mode
+    })
   ],
   declarations: [
     AppComponent,
@@ -34,4 +45,4 @@ import { UserModule } from './user/user.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

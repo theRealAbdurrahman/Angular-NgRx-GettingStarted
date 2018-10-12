@@ -1,4 +1,10 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "files.autoSave": "afterDelay"
+  "files.autoSave": "onWindowChange",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "typescriptHero.imports.stringQuoteStyle": "'",
+  "npm-intellisense.importQuotes": "'",
+  "autoimport.doubleQuotes": false,
+  "prettier.singleQuote": true
 }
