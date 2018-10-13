@@ -6,5 +6,6 @@
   "typescriptHero.imports.stringQuoteStyle": "'",
   "npm-intellisense.importQuotes": "'",
   "autoimport.doubleQuotes": false,
-  "prettier.singleQuote": true
+  "prettier.singleQuote": true,
+  "zenMode.centerLayout": false
 }
